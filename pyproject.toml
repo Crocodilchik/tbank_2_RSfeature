@@ -1,0 +1,10 @@
+[project]
+name = "yambda-rl-study"
+version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = ["torch", "polars", "numpy", "huggingface-hub", "pyyaml", "catboost", "scikit-learn", "nbformat", "nbclient", "ipykernel", "matplotlib", "pytest", "psutil"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

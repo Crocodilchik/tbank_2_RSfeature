@@ -1,0 +1,38 @@
+protocol: yambda-pit-v2-matured-smoke
+seed: 42
+seeds: [42]
+data:
+  repo: yandex/yambda
+  file: flat/50m/multi_event.parquet
+  user_limit: 100
+  catalog_size: 2000
+  history_length: 32
+  max_train_per_user: 32
+  max_rl_per_user: 16
+  max_eval_per_user: 4
+  min_history: 0
+  reward_guard_units: 86400
+  split_quantiles: [0.50, 0.55, 0.80, 0.90]
+model:
+  hidden: 64
+  layers: 2
+  heads: 4
+  dropout: 0.1
+training:
+  batch_size: 64
+  epochs: 1
+  rm_epochs: 1
+  rm_members: 3
+  lr: 0.001
+  rl_lr: 0.0001
+  checkpoint_every: 200
+  rl_steps: 12
+  beta: 0.03
+  pessimism: 0.2
+  diversity: 0.05
+  horizon: 5
+  candidates: 128
+  relevance_tolerance: 0.02
+  max_hours: 0.5
+  hard_max_hours: 0.75
+  bootstrap_replicates: 200

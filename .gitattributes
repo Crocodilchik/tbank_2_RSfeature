@@ -1,0 +1,20 @@
+# Normalize source text in Git; use native CRLF for PowerShell checkouts.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.ps1 text eol=crlf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Binary artifacts are ignored; keep explicit attributes as a fallback.
+*.parquet binary
+*.npz binary
+*.npy binary
+*.pt binary
+*.cbm binary
+*.png binary
+*.zip binary
